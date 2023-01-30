@@ -6,6 +6,7 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { Document } from "@contentful/rich-text-types";
 import '../styles/styles.css';
 import '../../public/favicon.ico'
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 
 const linkListsIds = []
 const linkList = []
@@ -25,6 +26,8 @@ for (const id of linkListsIds) {
 
 <html lang="en">
     <head>
+        <!-- Google tag (gtag.js) -->
+        <GoogleAnalytics />
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^2.0.0",
+    "@astrojs/partytown": "^1.0.3",
     "@astrojs/react": "^2.0.1",
     "@contentful/rich-text-html-renderer": "^16.0.2",
     "astro": "^2.0.2",
