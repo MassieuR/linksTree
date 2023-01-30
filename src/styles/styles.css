@@ -13,14 +13,13 @@ html {
     font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
     color: var(--just-white);
-    background: rgb(30,26,96);
-    background: linear-gradient(90deg, rgba(30,26,96,1) 9%, rgba(72,72,179,0.9808298319327731) 60%, rgb(141, 169, 240) 100%);
 }
 
 body {
     width: 100vw;
     height: auto;
     padding: 30px 0;
+    background: linear-gradient(90deg, rgba(30,26,96,1) 9%, rgba(72,72,179,0.9808298319327731) 60%, rgb(141, 169, 240) 100%);
 }
 
 .info {
@@ -51,16 +50,16 @@ body {
     text-align: center;
 }
 
-.personal, .professional {
+.linksList {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
     min-width: 250px;
     max-width: 650px;
     margin: 2rem auto 0;
 }
 
-.personal h2, .professional h2 {
+.linksList h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
 }

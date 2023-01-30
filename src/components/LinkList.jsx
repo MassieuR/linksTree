@@ -2,7 +2,7 @@ import React from "react";
 
 const LinkList = ({ name, links }) => {
   return (
-    <section className="personal">
+    <section className="linksList">
       <h2>{name}</h2>
       <ul className="links">
         {links.map((link) => (

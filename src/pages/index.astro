@@ -4,7 +4,8 @@ import LinkList from '../components/LinkList.jsx';
 import { contentfulClient } from '../lib/contentful';
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { Document } from "@contentful/rich-text-types";
-import '../../public/styles.css';
+import '../styles/styles.css';
+import '../../public/favicon.ico'
 
 const generalData = await contentfulClient.getEntries({
     content_type: 'generalInformation'
