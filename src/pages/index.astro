@@ -4,6 +4,7 @@ import LinkList from '../components/LinkList.jsx';
 import { contentfulClient } from '../lib/contentful';
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { Document } from "@contentful/rich-text-types";
+import '../../public/estilos.css'
 
 const generalData = await contentfulClient.getEntries({
     content_type: 'generalInformation'
@@ -26,7 +27,6 @@ const linkLists = generalLinks.items;
         <meta name="author" content='Rodrigo Massieu'/>
         <meta name="description" content="Personal links tree">
         <meta name="keywords" content="Frontend, Javascript, Astro, Contentful">
-        <link rel="stylesheet" href='/public/index.css'/>
         <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 		<title>Massieu Links</title>
