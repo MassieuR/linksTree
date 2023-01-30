@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Info = () => {
+const Info = ({name, description, photo}) => {
   return (
     <section className='info'>
-        <img src="/public/profile.avif" alt="profile picture"/> 
-        <h1>Rodrigo Massieu</h1>
-        <p>Frontend developer & Engineer. Boardgames lover ♘.</p>
+        <img src={photo} alt="profile picture"/> 
+        <h1>{name}</h1>
+        <p>{description}</p>
     </section>
   )
 }

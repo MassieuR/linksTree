@@ -1,13 +1,13 @@
 import React from 'react'
 
-const LinkList = ( {title, link} ) => {
+const LinkList = ( {name, links} ) => {
     
   return (
     <section className="personal">
-            <h2>{title}</h2>
+            <h2>{name}</h2>
             <ul className='links'>
-                {link.map(link => (
-                    <li class="icon-wrapper"><img class="icon" src={link.src} alt="discord-icon"/><a href={link.href}><span>{link.name}</span></a></li>
+                {links.map(link => (
+                    <li key={link.fields.name} className="icon-wrapper"><img className="icon" src={link.fields.icon.fields.file.url} alt={`${link.fields.name}-icon`}/><a href={link.fields.url} target='_blank'><span>{link.fields.name}</span></a></li>
                 ))}
             </ul>
         </section>

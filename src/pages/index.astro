@@ -1,13 +1,36 @@
+---
+import Info from '../components/Info.jsx';
+import LinkList from '../components/LinkList.jsx';
+import { contentfulClient } from '../lib/contentful';
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { Document } from "@contentful/rich-text-types";
+
+const generalData = await contentfulClient.getEntries({
+    content_type: 'generalInformation'
+})
+const dataInfo = generalData.items[0].fields
+
+const generalLinks = await contentfulClient.getEntries({
+    content_type: 'linkList'
+})
+
+const linkLists = generalLinks.items;
+---
+
 <html lang="en">
-	<head>
+    <head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+        <link rel="stylesheet" href="/src/index.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		<a href="./personal">Personal</a>
+        <Info name={dataInfo.name} description={dataInfo.description} photo={dataInfo.photo.fields.file.url} />
+        {linkLists.map(list => (
+            <LinkList name={list.fields.name} links={list.fields.link} />
+        ))}
 	</body>
 </html>
